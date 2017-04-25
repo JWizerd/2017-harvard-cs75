@@ -1,0 +1,57 @@
+HTTP Review
+  A Typical Internet Process Goes Like This:
+    you press enter, this creates a GET request that contains a packet (containing headers) that state what you want to get back from the web server
+    in headers the host: header field is critical because it helps detect an instance of a website on a virtualized web server such as a cloud like Heroku or digital ocean
+    your ISP initiates an IP look up where if ip is correct will route the traffic to a network or worst case root server which will then route your connection to the remote web server (BlueHost, GoDaddy Hosting, Digital Ocean etc.)
+    the web server (Apache, MIIS, Nginx) will respond by download the root folders content which will most of the time is cached for a faster response
+    SSL (Secure Sockets Layer) is important because packet contents like session and cookies can be used to hack a users account if they aren't properly encrypted
+
+
+APACHE
+  Most commonly used web server
+  httpd.conf, apache.conf, apache2.conf are usually the main configuration files for your apache web server
+  Apex Domains cannot be Aliases for example: cs75.net cannot be an a record for another website but www.cs75.net can be. Creating apex a records can create problems like breaking email configurations.
+  DocumentRoot - this is where the websites content lives
+  If you are using SSL with virtualization (multiple websites on one single server) you will need a wildcard SSL certificate or you will need to generate unique ips for each website since SSL certificates only work with unique ips per website
+  URL ReWrite - ReWrite URLs that user types in related to your website such creating pretty URLs
+    RewriteEngine On
+  POST is more secure than GET and should be used for all sensitive information
+    GET requests are saved in your search history via the URL params
+    unencrypted websites do not encrypt url params, ssl does
+    GET requests are logged into the web server's log files which if FTP is hacked can be made accessible to hacker
+    Issues with POST
+      can't share a POST url (i.e. someone wants to share a book from an online store but the link has the users session cookie so the link is broken to the other computer viewing the link)
+      post requests can resubmit forms such as checkout forms contact forms etc. so it's best to create an immediate 301 redirect after the a form is successfully submitted
+
+
+PERMISSIONS
+  file permissions are important so that hackers cannot get access to your sensitive files and break your application or steal information like API keys, tokens, DB User and Pass etc.
+  ls -l when viewing files shows you the permissions for a file
+    first -rw                     second -r                 third -r
+    admin has read write access    group has read access    world has read access (world should not have rw access)
+  to change permissions of a file you chmod (change mode)
+    for example: to give all user read access to a file (so a file can be viewed by all parties on the internet) use chmod a+r filename.html
+                                                                                                                           a = all and r = read access
+  external reference pertaining to Permissions: http://linuxcommand.org/lts0070.php                                                                                                                           
+
+
+PHP
+  interpreted language, runs line by line, no intermediary such as being compiled to C and then to binary
+  interpreted languages are generally less performant than compiled languages because every time you run it it needs to be "interpreted and then parsed into computer code"
+  with compiled languages think SASS to CSS except C/C++ etc. to binary
+  PHP compilers are available called opt code caches that do the interpretation once and then translate it into an intermediary language like C so that PHP runs faster
+  a runtime is what language is running during execution so an interpreted language without a opt code cache is running itself while an interpreted lang with opt code cache has a lower level runtime like c++
+  suPHP -  a PHP model that prevents "World Readable Permissions" by Apache which is more secure and prevents users from viewing PHP code
+  loose type languages like PHP have implicit boolean conversions if ("hello") is equal to true
+  loose typing is acceptable with a Web Based language like PHP because the only way to dynamically interact with users via a web browser is through "Strings" i.e. there is no unique data type for an html input form it's String
+  NULL is a value in PHP because there is "SET" and "UNSET" like undefined for JS
+  PHP returns mixed data types very commonly which means it's best practice to check for specific data types
+  SUPER GLOBALS
+    $_COOKIE
+    $_ENV
+    $_FILES an associative array containing information about user file uploads
+    $_GET
+    $_POST
+    $_REQUEST
+    $_SERVER
+    $_SESSION implement state in an application such as shopping carts or already logged in
