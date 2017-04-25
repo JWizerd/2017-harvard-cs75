@@ -29,10 +29,14 @@ PERMISSIONS
   ls -l when viewing files shows you the permissions for a file
     first -rw                     second -r                 third -r
     admin has read write access    group has read access    world has read access (world should not have rw access)
+  wr = write
+  rw = read write
+  x = execute which in permissions doesnt mean run but means to 'cd' into the directory
   to change permissions of a file you chmod (change mode)
     for example: to give all user read access to a file (so a file can be viewed by all parties on the internet) use chmod a+r filename.html
                                                                                                                            a = all and r = read access
-  external reference pertaining to Permissions: http://linuxcommand.org/lts0070.php                                                                                                                           
+  external reference pertaining to Permissions: http://linuxcommand.org/lts0070.php
+  Server Side Files should Only Be Readable by The Developer (i.e. the server) where frontend files (js, html, css) need to be readable by the world
 
 
 PHP
