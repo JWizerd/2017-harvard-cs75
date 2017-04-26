@@ -1,0 +1,17 @@
+mvc/5/README
+
+David J. Malan
+malan@harvard.edu
+
+Improves upon mvc/4 by isolating web-accessible content in its own subdirectory.
+
+html/
+ index.php - homepage for the course
+ lecture0.php - a lecture
+ lecture1.php - a lecture
+ lectures.php - a list of lectures
+includes/
+ helpers.php - helper functions
+templates/
+ footer.php - pages' footer
+ header.php - pages' header

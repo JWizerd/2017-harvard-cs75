@@ -1,0 +1,13 @@
+mvc/1/README
+
+David J. Malan
+malan@harvard.edu
+
+Improves upon mvc/0 by factoring out pages' header and footer.
+
+footer.php - pages' footer
+header.php - pages' header
+index.php - homepage for the course
+lecture0.php - a lecture
+lecture1.php - a lecture
+lectures.php - a list of lectures

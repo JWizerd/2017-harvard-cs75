@@ -1,0 +1,14 @@
+mvc/2/README
+
+David J. Malan
+malan@harvard.edu
+
+Improves upon mvc/1 by wrapping header and footer with a parameterized function.
+
+footer.php - pages' footer
+header.php - pages' header
+helpers.php - helper functions
+index.php - homepage for the course
+lecture0.php - a lecture
+lecture1.php - a lecture
+lectures.php - a list of lectures

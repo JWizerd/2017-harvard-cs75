@@ -1,0 +1,16 @@
+mvc/4/README
+
+David J. Malan
+malan@harvard.edu
+
+Improves upon mvc/3 by organizing files into subdirectories.
+
+includes/
+ helpers.php - helper functions
+index.php - homepage for the course
+lecture0.php - a lecture
+lecture1.php - a lecture
+lectures.php - a list of lectures
+templates/
+ footer.php - pages' footer
+ header.php - pages' header
