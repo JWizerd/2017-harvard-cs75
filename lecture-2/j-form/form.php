@@ -28,6 +28,7 @@ class Database {
       die('error establishing databse' . $this->connection->error);
     }
   }
+
 }
 
 class Form extends Database {
@@ -45,9 +46,7 @@ class Form extends Database {
 
       $sql = "INSERT INTO students (first, last, course) VALUES ('$first_name', '$last_name', '$course_name')";
 
-      echo $sql;
-
-      $result = $this->query($sql);
+      $this->query($sql);
     }
 
   }
@@ -59,7 +58,11 @@ class Form extends Database {
 
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
-          echo "<p>" . $row["first"]. " - Name: " . $row["last"]. " - " . $row["course"]. "<br>";
+          echo    "<tr>" .
+                    "<td>". $row["first"]. "</td>" .
+                    "<td>". $row["last"]. "</td>" .
+                    "<td>". $row["course"]. "</td>" .
+                  "</tr>";
       }
     } else {
         echo "0 results";
@@ -70,7 +73,6 @@ class Form extends Database {
 }
 
 $form = new Form();
-
 $form->post_form();
 
 ?>
@@ -82,6 +84,12 @@ $form->post_form();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    th, td {
+      border: 1px solid #333;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
   <form action="form.php" method="post">
@@ -90,6 +98,13 @@ $form->post_form();
     <input required type="text" name="course" placeholder="course name">
     <input type="submit" name="submit">
   </form>
-  <? $form->get_students(); ?>
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Course Name</th>
+    </tr>
+    <? $form->get_students(); ?>
+  </table>
 </body>
 </html>
