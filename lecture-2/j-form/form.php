@@ -1,5 +1,5 @@
 <?
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost'); // constants are good for db creds because they are immutable
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
 define('DB_NAME', 'j-form');
