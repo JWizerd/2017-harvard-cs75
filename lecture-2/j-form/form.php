@@ -33,6 +33,8 @@ class Database {
 
 class Form extends Database {
 
+  public $error;
+
   public function post_form() {
     $this->open_db_connection();
     $this->process_query();
@@ -40,15 +42,19 @@ class Form extends Database {
 
   public function process_query() {
     if (isset($_POST['submit'])) {
-      $first_name = htmlspecialchars($_POST['first']);
-      $last_name = htmlspecialchars($_POST['last']);
-      $course_name = htmlspecialchars($_POST['course']);
 
-      $sql = "INSERT INTO students (first, last, course) VALUES ('$first_name', '$last_name', '$course_name')";
+      if (empty($_POST['first']) || empty($_POST['last']) || empty($_POST['course'])) {
+        echo '<p style="color: red;">please fill out entire form</p>';
+      } else {
+        $first_name = htmlspecialchars($_POST['first']);
+        $last_name = htmlspecialchars($_POST['last']);
+        $course_name = htmlspecialchars($_POST['course']);
 
-      $this->query($sql);
+        $sql = "INSERT INTO students (first, last, course) VALUES ('$first_name', '$last_name', '$course_name')";
+
+        $this->query($sql);
+      }
     }
-
   }
 
   public function get_students() {
@@ -70,10 +76,15 @@ class Form extends Database {
     $this->connection->close();
   }
 
+  public function val_validation($post_val) {
+    if (isset($post_val)) {
+      echo $post_val;
+    }
+  }
+
 }
 
 $form = new Form();
-$form->post_form();
 
 ?>
 
@@ -92,10 +103,11 @@ $form->post_form();
   </style>
 </head>
 <body>
+  <? $form->post_form(); ?>
   <form action="form.php" method="post">
-    <input required type="text" name="first" placeholder="first name">
-    <input required type="text" name="last" placeholder="last name">
-    <input required type="text" name="course" placeholder="course name">
+    <input type="text" name="first" placeholder="first name" value="<?= $form->val_validation($_POST['first']); ?>">
+    <input type="text" name="last" placeholder="last name" value="<?= $form->val_validation($_POST['last']); ?>">
+    <input type="text" name="course" placeholder="course name" value="<?= $form->val_validation($_POST['course']); ?>">
     <input type="submit" name="submit">
   </form>
   <table>
