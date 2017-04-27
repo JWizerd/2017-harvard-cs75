@@ -3,8 +3,14 @@ MVC
     /        \
   View      Model
 
-  - Controller 
+  - Controller handles the interaction the user has within your application
+  - Views handle aesthetics
+  - Model interacts directly with the database and hands data to the controller
 
+  - When building your own MVC it's important to remember that php files with sensitive information such as files that store username and password or hold username password, card info etc. should be placed outside of the document root i.e. public_html and then restrict restrict read write access from the
+  Client. For example, your directory structure should look like this.
+    public_html/
+    php_logic/
 
 
 PHP
@@ -35,11 +41,9 @@ PHP
     that cookie id and login as you under you current session. It's best to use SSL to encrypt your Cookie ID.
 
   - do not store sensitive information in the users Cookies as it opens a ton of security risks one of which is phishing scams
-    where a hacker can send you a phishing email that redirects you to a form and form inputs within that form
-    could contain a javascript that stores the users cookies via document.cookies and sends it to the hacker
+    where a hacker can send you a phishing email that redirects you to a form and form inputs within that form could contain a javascript that stores the users cookies via document.cookies and sends it to the hacker
 
-  - you can store sensitive information in the Session as it's most likely safe due to it being stored on the server. Absolutely no
-    sensitive information should be stored in a cookie as it is accessible client side.
+  - you can store sensitive information in the Session as it's most likely safe due to it being stored on the server. Absolutely no sensitive information should be stored in a cookie as it is accessible client side.
 
 
 APACHE
@@ -51,5 +55,4 @@ APACHE
 
   - Every time a web page is finished loading the connection between the server and the browser is closed.
 
-  - for security purposes it's good to remove your apache and php versions from your request headers to prevent
-    malicious attacks for those specific bugs. You can change these settings in php.ini and httpd.conf
+  - for security purposes it's good to remove your apache and php versions from your request headers to prevent malicious attacks for those specific bugs. You can change these settings in php.ini and httpd.conf
