@@ -1,11 +1,55 @@
-PHP $_POST and $_GET
+MVC
+    Controller
+    /        \
+  View      Model
+
+  - Controller 
+
+
+
+PHP
   - being that PHP is an interpreted language when, for instance a form is submitted,
     the server 'interprets' the language line by line and then replies to the request, whether
-    $_GET of $_POST with outputted information. The server does not return php it returns the outputted
+
+  - $_GET of $_POST with outputted information. The server does not return php it returns the outputted
     text, imgs, html etc.
 
-APACHE DOCUMENT ROOT vs. Public HTML
+  - $_SESSION is used to keep track of state in your application using cookies.
+
+    A metaphor to this would be a concert. Where when a user gives the door guy his ticket (user and pass)
+    and if its correct the user can enter and stay in so long as the user get their hand stamped. That
+    stamp could be considered the cookie. The user can come and go as they please so long as they show the door guy their hand stamp
+    which in web development means a big randomly generated number which is the cookie id.
+
+  - to keep track of cookies PHP stores each unique $_SESSION in their own file in tmp/. Each new session id / user
+    get their own file.
+
+  - serialization is the process of taking key value pairs set within your web application and storing them on the user's
+    disk for future
+
+  - Session is Server Side
+
+  - Cookie is Client Side
+
+  - Security Issue: because cookie id are passed between client and server someone on the same network as you could find
+    that cookie id and login as you under you current session. It's best to use SSL to encrypt your Cookie ID.
+
+  - do not store sensitive information in the users Cookies as it opens a ton of security risks one of which is phishing scams
+    where a hacker can send you a phishing email that redirects you to a form and form inputs within that form
+    could contain a javascript that stores the users cookies via document.cookies and sends it to the hacker
+
+  - you can store sensitive information in the Session as it's most likely safe due to it being stored on the server. Absolutely no
+    sensitive information should be stored in a cookie as it is accessible client side.
+
+
+APACHE
   - Document Root is where the contents of the main web server go i.e. http://blah.com/ is the document root
+
   - Public HTML is the folder where web contents are stored for different users. for instance,
     if you're application had 1,000 users each one of those users would have a public_html folder
     so 1,000 public_html folders would live on your server and could be visited at http://blah.com/~user
+
+  - Every time a web page is finished loading the connection between the server and the browser is closed.
+
+  - for security purposes it's good to remove your apache and php versions from your request headers to prevent
+    malicious attacks for those specific bugs. You can change these settings in php.ini and httpd.conf

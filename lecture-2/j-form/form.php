@@ -46,9 +46,9 @@ class Form extends Database {
       if (empty($_POST['first']) || empty($_POST['last']) || empty($_POST['course'])) {
         echo '<p style="color: red;">please fill out entire form</p>';
       } else {
-        $first_name = htmlspecialchars($_POST['first']);
-        $last_name = htmlspecialchars($_POST['last']);
-        $course_name = htmlspecialchars($_POST['course']);
+        $first_name = $_POST['first'];
+        $last_name = $_POST['last'];
+        $course_name = $_POST['course'];
 
         $sql = "INSERT INTO students (first, last, course) VALUES ('$first_name', '$last_name', '$course_name')";
 
@@ -105,9 +105,9 @@ $form = new Form();
 <body>
   <? $form->post_form(); ?>
   <form action="form.php" method="post">
-    <input type="text" name="first" placeholder="first name" value="<?= $form->val_validation($_POST['first']); ?>">
-    <input type="text" name="last" placeholder="last name" value="<?= $form->val_validation($_POST['last']); ?>">
-    <input type="text" name="course" placeholder="course name" value="<?= $form->val_validation($_POST['course']); ?>">
+    <input type="text" name="first" placeholder="first name" value="<?= $form->val_validation(htmlspecialchars($_POST['first'])); ?>">
+    <input type="text" name="last" placeholder="last name" value="<?= $form->val_validation(htmlspecialchars($_POST['last'])); ?>">
+    <input type="text" name="course" placeholder="course name" value="<?= $form->val_validation(htmlspecialchars($_POST['course'])); ?>">
     <input type="submit" name="submit">
   </form>
   <table>
