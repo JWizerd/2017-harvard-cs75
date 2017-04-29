@@ -1,0 +1,106 @@
+<memu>
+  <category name="pizzas">
+    <item>
+      <name>Cheese &amp; Tomato</name>
+      <price>
+        <sm>5.50</sm>
+        <lg>7.50</lg>
+      </price>
+      <addon>
+        <name>Extra Cheese</name>
+        <price>1.25</price>
+      </addon>
+    </item>
+    <item>
+      <name>Tomato</name>
+      <price>
+        <sm>3.50</sm>
+        <lg>4.50</lg>
+      </price>
+      <addon>
+        <name>Extra Cheese</name>
+        <price>1.25</price>
+      </addon>
+    </item>
+    <item>
+      <name>BBQ</name>
+      <price>
+        <sm>34.50</sm>
+        <lg>45.50</lg>
+      </price>
+      <addon>
+        <name>Extra Cheese</name>
+        <price>1.25</price>
+      </addon>
+    </item>
+  </category>
+  <category name="pastas">
+    <item>
+      <name>Macaroni</name>
+      <price>
+        <sm>5.50</sm>
+        <lg>7.50</lg>
+      </price>
+    </item>
+    <item>
+      <name>Pesto</name>
+      <price>
+        <sm>3.50</sm>
+        <lg>4.50</lg>
+      </price>
+    </item>
+    <item>
+      <name>Ziti</name>
+      <price>
+        <sm>34.50</sm>
+        <lg>45.50</lg>
+      </price>
+    </item>
+  </category>
+  <category name="salads">
+    <item>
+      <name>Ceasar</name>
+      <price>
+        <sm>5.50</sm>
+        <lg>7.50</lg>
+      </price>
+    </item>
+    <item>
+      <name>Italian</name>
+      <price>
+        <sm>3.50</sm>
+        <lg>4.50</lg>
+      </price>
+    </item>
+    <item>
+      <name>Homestyle Ranch</name>
+      <price>
+        <sm>34.50</sm>
+        <lg>45.50</lg>
+      </price>
+    </item>
+  </category>
+    <category name="drinks">
+    <item>
+      <name>Coca Cola</name>
+      <price>
+        <sm>5.50</sm>
+        <lg>7.50</lg>
+      </price>
+    </item>
+    <item>
+      <name>Pepsi</name>
+      <price>
+        <sm>3.50</sm>
+        <lg>4.50</lg>
+      </price>
+    </item>
+    <item>
+      <name>Beer</name>
+      <price>
+        <sm>34.50</sm>
+        <lg>45.50</lg>
+      </price>
+    </item>
+  </category>
+</memu>
