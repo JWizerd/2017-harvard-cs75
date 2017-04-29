@@ -1,0 +1,18 @@
+mvc/7/README
+
+David J. Malan
+malan@harvard.edu
+
+Improves upon mvc/6 by introducing search engine-friendly URLs via mod_rewrite.
+
+html/
+ index.php - controller
+includes/
+ helpers.php - helper functions
+views/
+ index.php - homepage for the course
+ lecture.php - a lecture
+ lectures.php - a list of lectures
+ templates/
+  footer.php - pages' footer
+  header.php - pages' header

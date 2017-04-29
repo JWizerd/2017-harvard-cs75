@@ -1,0 +1,25 @@
+mvc/9/README
+
+David J. Malan
+malan@harvard.edu
+
+Improves upon mvc/8 by introducing a framework (CodeIgniter).
+
+application/
+ config/
+  config.php - CodeIgniter's configuration
+  routes.php - default routes
+  ...
+ controllers/
+  homepage.php - application controller
+ views/
+  homepage/
+   index.php - a homepage for the course
+   lecture.php - a lecture
+   lectures.php - a list of lectures
+  templates/
+   footer.php - pages' footer
+   header.php - pages' header
+index.php - front controller
+system/
+ ...
