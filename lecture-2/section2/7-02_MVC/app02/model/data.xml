@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Blog Title: MVC Blog</title>
+    <description>
+    Blog Description: Exploring MVC since 2002
+    </description>
+    <item>
+        <title>Post Title: Intro to MVC</title>
+        <author>P. Myer Nore</author>
+        <pubDate>Tue, 03 Jun 2003 09:39:21 GMT</pubDate>
+        <description><![CDATA[ <p><h2>Intro to MVC</h2></p><p>Web
+Developers call dynamic websites <strong>web
+applications</strong> because from the coder's perspective,
+<strong>dynamic websites are applications that run on a web
+server</strong>.</p><p>Modern applications follow <strong>design
+patterns</strong>. One very common design pattern is Model, View,
+Controller, or MVC.</p><p>To follow MVC when writing an
+application, you <em>separate your code</em> according to the
+function of the code: <ul> <li><strong>Model</strong> code stores
+the application data and <em>models</em> your application's
+domain. For example, if you were writing a blogging application,
+the Model code would determine what data needs to be stored about
+a Blog Post, and take responsibility for storing and retrieving
+Blog Post data.</li> <li><strong>View</strong> code produces
+anything <em>viewable</em> by the site visitor. For example, in a
+blogging application, the View code would turn a Blog Post's data
+into HTML and CSS, which would then be rendered in the site
+viewer's web browser and determine how the site appears to the
+visitor.</li> <li><strong>Controller</strong> code receives all
+of site visitor's clicks and other input, and uses them to help
+the user <em>control</em> your application.  For example, in a
+blogging site, if a user clicks on 'next post', the controller
+will receive that click, fetch the appropriate Model from the
+model code, send and send it to the View to turn it into the HTML
+that the site viewer's browser will render for the Site Viewer's
+viewing pleasure.</li> </ul> </p> 
+]]>
+</description>
+</item>
+<item>
+<title>lorem ipsum</title>
+<author>P. Myer Nore</author>
+<pubDate>Tue, 20 May 2003 08:56:02 GMT</pubDate>
+<description><![CDATA[
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+purus eros, blandit vel semper ut, scelerisque a tortor. Morbi et
+mi urna, at egestas massa. Phasellus lacus erat, ornare eget
+ultricies at, congue sit amet nibh. Donec iaculis massa vel
+tellus volutpat in vulputate felis posuere. Vestibulum ante ipsum
+primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+Quisque in felis molestie erat vulputate pellentesque. Donec nisi
+massa, auctor non lacinia nec, luctus eget arcu. Aliquam eu
+tortor sit amet magna commodo porta consequat vitae nibh.
+Praesent commodo, arcu vitae rutrum posuere, tellus urna
+scelerisque leo, ut molestie massa nulla a sapien.
+</p>
+<p>
+Etiam nec enim id velit placerat gravida a hendrerit dui.
+Curabitur commodo dignissim dui vitae lacinia. Pellentesque sem
+neque, tincidunt id egestas mollis, scelerisque non sem. Mauris
+luctus dolor vitae quam convallis consequat. In et fringilla
+massa. In hac habitasse platea dictumst. In cursus nunc a nibh
+blandit lacinia. Proin nec lectus at nunc varius facilisis ac
+varius turpis. Proin molestie magna bibendum tellus dictum
+gravida. Vivamus faucibus pretium nisi, ut scelerisque dui
+facilisis et. Phasellus aliquet erat vel libero ultricies
+venenatis tempor eget ante. Etiam nec cursus magna. Cum sociis
+natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Integer at risus lacus.
+</p>
+]]></description>
+</item>
+<item>
+<title>hipster ipsum</title>
+<author>P. Myer Nore</author>
+<pubDate>Tue, 27 May 2003 08:37:32 GMT</pubDate>
+<description><![CDATA[
+<p>Commodo ut 8-bit ethnic.  Austin lomo post-ironic vice,
+cupidatat  ethical culpa  fanny pack brooklyn flexitarian
+gastropub eiusmod dolore american apparel sint.  Banh mi commodo
+tempor skateboard, cred mlkshk craft beer vice culpa  minim
+consequat wes anderson before they sold out mcsweeney's.
+Authentic exercitation sartorial, ullamco cliche aliqua in.
+Mlkshk raw denim synth Austin pariatur.  Pitchfork in  excepteur
+raw denim, pinterest narwhal sunt pour-over brunch DIY accusamus.
+Blog cosby sweater swag, iphone magna williamsburg retro master
+cleanse veniam food truck nostrud accusamus culpa  mixtape high
+life.</p><p>Ad terry richardson nihil fanny pack culpa
+voluptate, wes anderson craft beer artisan pop-up polaroid
+excepteur  narwhal.  Wes anderson salvia anim  tattooed nostrud
+portland, squid odio shoreditch post-ironic ethnic iphone.
+Adipisicing fixie williamsburg, aliquip officia  raw denim
+placeat swag id  ex tattooed.  Nostrud reprehenderit  irure, vice
+ea mumblecore odio flexitarian kogi skateboard tumblr fanny pack
+exercitation leggings iphone.  Freegan ex viral hoodie quis
+magna, four loko 8-bit fap etsy stumptown.  Quis 3 wolf moon
+messenger bag, ullamco lo-fi velit  semiotics sustainable hoodie
+assumenda keytar.  Etsy quis vero, quinoa gastropub nisi master
+cleanse in  mcsweeney's hella aesthetic letterpress truffaut art
+party.</p>
+]]></description>
+</item>
+</channel>
+</rss>
