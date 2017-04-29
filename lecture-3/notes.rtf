@@ -1,0 +1,20 @@
+File Permissions
+  - in terminal here is what permissions looks like for a file
+    -rw-r--r--  1 jeremiah  staff     0 Apr 28 10:35 notes.rtf // for a file
+    drwxr-xr-x@ 5 jeremiah  staff   170 Apr 28 10:36 src 3 // for a dir
+  - to change permissions of a file you would use CHMOD and the following commands to give read write and exectuable permissions
+  - the permissions of a file via bash shows 9 dashes ( --------- ) the first represent the user, the second the group and third the world
+  - here is how mathematically permissions are represented
+    rwx = 7
+    rw- = 6
+    r-x = 5
+    r-- = 4
+    w-- = 2
+    x-- = 1
+  - Without remembering the numbers you can change permissions like this chmod a+r filename. a stands for all
+  - an example for this directory permissions: drwx--x--x, would equal 751,
+    USER = (r = 4 + w = 2 + x = 1), GROUP = (r=4, w=1), WORLD = (x=1);
+  - *** its best practice to make the frontend files html, css, js, images etc. readable to the world but not writable or executable.
+    To accomplish this extract your server side code (business logic) into a directory above your document root / public_html dir
+    and make that executable
+    
