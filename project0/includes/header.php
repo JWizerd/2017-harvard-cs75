@@ -21,5 +21,9 @@
         <li><a href="index.php?page=<?= safe_str($category['name']); ?>"><?= safe_str($category['name']); ?></a></li>
 
       <?php endforeach ?>
-      <li><a href="cart.php">cart / checkout <?= '[ ' . count($_SESSION['cart']) . ' ]'; ?></a></li>
+      <?php if (isset($_SESSION['cart'])): ?>
+        <li><a href="cart.php">cart <?= '[ ' . count($_SESSION['cart']) . ' ]'; ?></a></li>
+      <?php else : ?>
+        <li><a href="cart.php">cart [ 0 ]</a></li>
+      <?php endif; ?>
     </ul>
