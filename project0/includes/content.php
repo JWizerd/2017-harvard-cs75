@@ -8,9 +8,9 @@
   <?php 
   foreach ($category as $item): ?>
   
-    <li>
+    <li class="item">
       <form action="" method="get">
-          <h3><?= safe_str($item->name); ?> - </h3>
+          <h3>&bigstar; <?= safe_str($item->name); ?> - </h3>
           <input type="hidden" name="item" value="<?= safe_str($item->name); ?>">
           <label for="small"><input type="checkbox" name="small" value="checked">SM: $<?= safe_str($item->price->sm); ?></label>
           <label for="large"><input type="checkbox" name="large" value="checked"> LG: $<?= safe_str($item->price->lg); ?></label>

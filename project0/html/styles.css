@@ -1,0 +1,55 @@
+body {
+  background-color: #333;
+  color: white;
+  letter-spacing: 1px;
+  font-family: Helvetica, 'sans-serif';
+}
+
+.company {
+  font-size: 80px;
+  background-color: orange;
+  padding: 30px 5px;
+  color: #333;
+  margin: -8px;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+.navigation {
+  padding-left: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.navigation li:first-child {
+  padding-left: 0;
+}
+
+.item {
+  list-style: none;
+}
+
+input[type='submit'] {
+  border-radius: 0;
+  padding: 5px 10px;
+  color: white;
+  background-color: orange;
+  border: none;
+  outline: 0;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+input[type='submit']:hover {
+  cursor: pointer;
+}
