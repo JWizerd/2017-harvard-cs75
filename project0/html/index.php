@@ -1,13 +1,11 @@
 <?php require('../includes/header.php'); ?>
 
-<?php if (isset($_GET['page'])): ?>
-  <?php 
-  $page = $_GET['page'];
-  require('../includes/content.php'); 
-  ?>
-<?php else: ?>
-  <h1>Welcome to the home page for the pizza shack.</h1>
-  <a href="?name=test" name="hello">test link</a>
-<?php endif; ?>
+<h2>Pizza Shack</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, atque velit, nam nesciunt perspiciatis et minus accusantium numquam minima, ullam quia magnam facere aspernatur laboriosam dicta fugit ipsum reprehenderit animi?</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, culpa, asperiores, numquam dolore sed tempora nemo recusandae laborum, voluptatem amet officiis eos inventore! Suscipit, aliquam eveniet tempore a, sit mollitia.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo odio accusantium officia, voluptates illum, quidem adipisci. Modi reiciendis ex, rem in cum dignissimos quae a soluta quidem esse beatae similique.</p>
 
 <?php require('../includes/footer.php'); ?>

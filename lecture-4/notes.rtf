@@ -1,0 +1,20 @@
+MYSQL
+
+- VARCHAR (variable character) purpose is for setting a maxium amount of characters. It's quicker to search through VARCHAR columns because of it's for fixed length. 
+- VARCHAR used to have max 255 chars not it has over 65,000
+
+- TEXT has no maximum chars. is meant for larger piece of text such as blog post content
+- MYSQL doesn't store TEXT fields during execution. Rather it uses a pointer to the piece of TEXT. This is important as it has performance issues due to the fact that in the web the pointer is cached not the text itself. 
+
+- Null checkbox when checked allows the field to be Null. Can be useful for optional fields. More performant to define Null rather than setting empty string.
+
+- Auto Increment: useful for IDs
+
+- Primary Key the unique identifier for each database entry. This can be used as the unique user ID. 
+- You can have more than one Key / Index. Creating unique secondary keys such as keys for usernames increases performance because the db doesn't have to search as much. 
+
+- More than likely when you run across a very slow web application, other than server load, is usually contributed to poor database structure.
+
+- Creating 'uniqueness' using Keys in MYSQL will increase performance a lot
+
+- Good relational database architecture utilizes 'normalization' which means extracting out as much redundant data as possible and utilizing JOIN which combines different db tables which does have inital CPU cost but saves significantly more disk space.

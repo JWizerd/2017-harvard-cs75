@@ -14,11 +14,11 @@
 <body>
   <h1 class="company">Pizza Shack</h1>
     <ul class="navigation">
-      <li><a href="index.php">home</a></li>
+      <li><a href="./">home</a></li>
       
       <?php foreach ($categories as $category): ?>
       
-        <li><a href="index.php?page=<?= safe_str($category['name']); ?>"><?= safe_str($category['name']); ?></a></li>
+        <li><a href="category.php?food=<?= safe_str($category['name']); ?>"><?= safe_str($category['name']); ?></a></li>
 
       <?php endforeach ?>
       <?php if (isset($_SESSION['cart'])): ?>

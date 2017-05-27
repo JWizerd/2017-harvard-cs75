@@ -1,0 +1,12 @@
+STEPS:
+[X] 1. Parse CSV using yahoo finance .csv files and endpoints
+[] 2. Using Ajax to allow the user to saerch and get realtime results
+[] 3. Allow user to create account
+[] 4. When user creates an account for the first time they get   $10,000 added to their account budget
+[] 5. User can add or sell stocks (only whole stocks not partial stocks)
+[] 6. Use relational databases (MySQL) to best organize data i.e. a users table, a stocks table (without price due to elasticity of stocks)
+* maybe have some way of keeping track of stock growth by querying csv files every day and then persiting that total to a users portfolio db. 
+
+PHP CSV:
+https://secure.php.net/manual/en/function.fopen.php
+https://secure.php.net/manual/en/function.fgetcsv.php

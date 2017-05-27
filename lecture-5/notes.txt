@@ -1,0 +1,45 @@
+MYSQL continued
+
+Scenario: You have two users who login into the same Chase Online Banking account on two different computers. They both at the same time withdrawal $100 from the account. Without precautions this could result in intertwined data corruption causing the bank to lose $200. This is due to the single threaded nature of web programming. But it can be prevented.
+
+Here's how:
+- ON DUPLICATE KEY: this sql method says that If one of the piece of data that are being manipulated are a duplicate just UPDATE the existing row. All at once it checks if current row exists and then updates row all at once.
+
+- TRANSACTIONS: better option than DUPLICATE KEY. TRANSACTIONS (InnoDB, storage engine) tell the computer, "Run these SQL statements all at once and DO NOT run any other SQL statements until this transaction has been executed". COMMIT submits the transaction to DB. 
+
+- Keep in mind that TRANSACTIONS only LOCK the ability to interact with the specified rows while the transaction is being processed where other features like LOCK in myISAM another db storage engine locks an entire table while transacion is happening.
+
+example of how transaction could work for transferring money between 2 different bank accounts: 
+  TRANSACTION
+    UPDATE account SET balance = balance - 1000 WHERE number = 2;
+    UPDATE account SET balance = balance + 1000 WHERE number = 1
+  COMMIT 
+
+By taking all of this type of validation into consideration you can write less code because your data is sanitized or filtered for you by your DB Query Language.
+
+- ROLLBACK: ROLLBACK just like github allows you to ROLLBACK your SQL Queries thus far.
+
+- RELATIONS: FOREIGN KEY CONSTRAINTS: You can tell InnoDB Where certain fields also appear in other tables by setting a foreign key. This is located in phpMyAdmin in relations
+
+- RESTRICTS: innoDB allows you to restrict operations such as deleting or updating an employee in the database using ON RESTRICT in relations area of phpMyAdmin
+
+- CASCADE is a rule you can set in Relations where you can update or delete a row across ALL tables. Such as deleting an employee across multiple tables in your db at once.
+
+- DECIMAL: built in mysql method for specifying the number of decimal points you want to specify such as 2 for money 
+
+FOR PROJECT 1
+
+use yahoo.finance.com and use PHP built in CSV to parse through stock pages using RESTful route that leads to a different stock on 
+http://download.finance.yahoo.com/d/quotes.csv?s=[replace with stock name ex: GOOG for Google]&f=sl1d1t1c1ohgv&e=.csv (Make to URL encode vars when GET url endpoint in program) open the downloadable CSV file on every stock specific yahoo page, parse it and get the values on my website.
+
+REQUIRED FEATURES:
+- Log In / Register (Use Log In examples from lecture 4)
+- Password in DB using Hash that has to use alpha and numeric chars
+- SESSION for giving access to admin area of website such as quote
+- Get a stock quote using CSV 
+- Persist stock quotes to DB Portfolio and shares to a user
+- Keep track of user account balance for user 
+- Gift 10,0000 to newly registered users
+- Sell and Trade Stocks and keep track of account balance
+- Query Yahoo Finance every time a user goes to portfolio page to view their stock growth. This approaches the idea that you shouldn't be persisting a fixed price in MySQL
+
