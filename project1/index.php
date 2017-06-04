@@ -7,7 +7,7 @@
       <h1>CS$75 Finance</h1>
       <p>Enter the stock that you're looking to buy</p>
       <p>OR</p>
-      <p><a href="login.php">login / create an account</a></p>
+      <p><a href="login.php">login</a> - OR - <a href="register.php">register</a></p>
 
       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
         <div class="form-group">
