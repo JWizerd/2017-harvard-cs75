@@ -1,4 +1,3 @@
-<?php require(CONTROLLER . 'csv.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

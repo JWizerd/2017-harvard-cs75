@@ -1,7 +1,8 @@
 <?php session_start(); ?>
 <?php  
   if (isset($_SESSION['authenticated'])) {
-    header( 'Location: admin/dashboard.php' );
+    header( 'Location: ./admin/dashboard.php' );
+    exit();
   }
 ?>
 <?php require('helpers/config.php'); ?>

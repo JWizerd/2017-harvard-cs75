@@ -42,6 +42,7 @@
 
       if ($authenticated) {
         $this->set_session_token();
+        echo '<h2 style="color: green;">Succesfully Logged In.</h2>';
         return true;
       } else {
         echo '<h2 style="color: red;">Username of Password is incorrect. Please try again.</h2>';
