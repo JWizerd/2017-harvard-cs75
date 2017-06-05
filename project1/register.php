@@ -29,10 +29,8 @@
       </div>
       <input type="submit" class="btn btn-default" name="create_account">
     </form>
-
+    <p>OR <a href="login.php">Login to your account</a></p>
 </div>
-
-<?php $register = new Register(); ?>
 
 <?php close_wrap(); ?>
 <?php require(PARTIAL . 'footer.php'); ?>

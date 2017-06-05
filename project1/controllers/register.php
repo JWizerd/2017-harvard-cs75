@@ -59,10 +59,12 @@
           echo  '<strong style="color:red; text-align: center;">' . 
                   'One or more fields are incorrect please try again.' . 
                 '</strong>';
-        return false;
+          return false;
 
       }
     }
 
   }
+
+  $register = new Register();
 ?>

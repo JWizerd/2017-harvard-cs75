@@ -21,8 +21,7 @@
       $db = new DB();
       $stmt = $db->pdo->prepare("INSERT INTO users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)");
       $stmt->execute([$this->first_name, $this->last_name, $this->email, password_hash($this->password, PASSWORD_DEFAULT)]);
-      $rows_added = $stmt->rowCount();
-      echo $rows_added;
+
       // close connection
       $db = null;
       $stmt = null;
