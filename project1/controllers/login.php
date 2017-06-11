@@ -3,6 +3,8 @@
 
   class Session extends DB {
 
+    protected $authenticated;
+
     function __construct() {
 
       if (isset($_POST['login'])) {
@@ -35,6 +37,8 @@
 
     private function set_session_token() {
       $_SESSION['authenticated'] = true;
+      $authenticated = $_SESSION['authenticated'];
+      return true;
     }
 
     private function login($email, $password) {
@@ -42,11 +46,15 @@
 
       if ($authenticated) {
         $this->set_session_token();
-        echo '<h2 style="color: green;">Succesfully Logged In.</h2>';
         return true;
       } else {
         echo '<h2 style="color: red;">Username of Password is incorrect. Please try again.</h2>';
       }
+    }
+
+    public function logout() {
+      session_destroy();
+      $this->authenticated = false;
     }
     
   }

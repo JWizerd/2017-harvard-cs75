@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php  
   if (isset($_SESSION['authenticated'])) {
-    header( 'Location: admin/dashboard.php' );
+    header( 'Location: dashboard.php' );
     exit();
   }
 ?>
@@ -37,6 +37,7 @@
       <input type="submit" class="btn btn-default" name="create_account">
     </form>
     <p>OR <a href="login.php">Login to your account</a></p>
+    
 </div>
 
 <?php close_wrap(); ?>

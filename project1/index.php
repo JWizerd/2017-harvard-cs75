@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require('helpers/config.php'); ?>
 <?php require(PARTIAL . 'header.php'); ?>
 <?php require(CONTROLLER . 'csv.php'); ?>

@@ -8,4 +8,13 @@
     echo '  </div><!-- row -->' .
           '</div><!-- container -->';
   }
+
+  function redirect($filename = "index.php", $variable) {
+
+    if (isset($variable)) {
+      header('Location: ' . $filename);
+      die();
+    }
+
+  }
 ?>

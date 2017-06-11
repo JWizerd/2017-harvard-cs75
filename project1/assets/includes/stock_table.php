@@ -19,7 +19,7 @@
 
   <form action="<?php $_SERVER['PHP_SELF'] ?>">
     <label for="quantity">Purchase Stock? Sure! How many would you like?</label>
-    <input type="number" name="quantity" min="1" max="50">
+    <input type="number" name="quantity" min="1">
     <input type="submit" value="Purchase" name="Add Stock">
   </form>
   

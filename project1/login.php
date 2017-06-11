@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php  
   if (isset($_SESSION['authenticated'])) {
-    header( 'Location: ./admin/dashboard.php' );
+    header( 'Location: dashboard.php' );
     exit();
   }
 ?>
