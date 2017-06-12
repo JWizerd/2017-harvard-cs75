@@ -2,6 +2,7 @@
 <?php require('helpers/config.php'); ?>
 <?php require(PARTIAL . 'header.php'); ?>
 <?php require(CONTROLLER . 'csv.php'); ?>
+<?php require(CONTROLLER . 'cart.php'); ?>
   <?php open_wrap(); ?>
 
     <div class="col-sm-4">
@@ -21,7 +22,7 @@
     </div>
 
     <div class="col-sm-8">
-      
+
       <?php if (isset($_GET['search-stock'])) : ?>
         <?php include(PARTIAL . 'stock_table.php'); ?>
       <?php else : ?>

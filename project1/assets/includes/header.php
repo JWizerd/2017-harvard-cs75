@@ -7,3 +7,12 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+<div class="header-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 .header-top">
+        <p class="text-right"><a href="cart.php">CART</a></p>
+      </div>
+    </div>
+  </div>
+</div>
