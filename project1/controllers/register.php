@@ -46,6 +46,7 @@
                   '<a href="login.php">login</a>' . 
                 '</h1>';
           $this->new_user($first_name, $last_name, $email, $password);
+          $this->add_reward($email);
 
         } else {
 
@@ -63,6 +64,17 @@
 
       }
     }
+
+    private function add_reward($email) {
+      $db = new DB();
+      $user_id = $db->get_user_id($email);
+      $stmt = $db->pdo->prepare("INSERT INTO budget (user_id, balance) VALUES (?, ?)");
+      $stmt->execute([$user_id, 10000]);
+
+      // close connection
+      $db = null;
+      $stmt = null;
+    } 
 
   }
 

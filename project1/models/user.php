@@ -25,7 +25,14 @@
       // close connection
       $db = null;
       $stmt = null;
-    } 
+    }
+
+    public function get_user_id($email) {
+      $stmt = $db->pdo->prepare("SELECT id FROM budget WHERE $email WHERE email = ?");
+      $stmt->execute([$email]);
+      $user_id = $stmt->fetch();
+      return $user_id;
+    }
     
   }
 ?>

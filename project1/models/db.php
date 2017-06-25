@@ -26,6 +26,13 @@
         echo $e->getMessage();
       }
     }
+
+    public function get_user_id($email) {
+      $stmt = $this->pdo->prepare("SELECT id FROM users WHERE email = ?");
+      $stmt->execute([$email]);
+      $user_id = $stmt->fetch();
+      return $user_id['id'];
+    }
   
   }
 ?>
