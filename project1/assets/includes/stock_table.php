@@ -17,7 +17,7 @@
 
 <?php if ($stock_info->invalid_entry($stock_info->csv_object) === false) : ?>
 
-  <form action="cart.php" method="POST">
+  <form action="" method="POST">
     <label for="quantity">Purchase Stock? Sure! How many would you like?</label>
     <input type="number" name="quantity" min="1">
     <input type="submit" value="Purchase" name="add_stock" class="buy-stock">
